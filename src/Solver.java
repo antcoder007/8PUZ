@@ -59,7 +59,7 @@ public class Solver {
      * the path with least distance and also best possible
      * path using heuristic function @manhattan()
      */
-    public void dijkstra() {
+    public void a_star() {
         while (!PQ.isEmpty()) {
             State min = PQ.poll();
             if (min.moves > 30) {
@@ -156,7 +156,7 @@ public class Solver {
     }
 
     public int dijCost() {
-        dijkstra();
+        a_star();
         return isSolvabledij() ? cost1 : -1;
     }
 
