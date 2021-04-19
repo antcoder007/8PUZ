@@ -1,6 +1,11 @@
 # 8-Puzzle
 
-8-Puzzle is a JAVA program for solving a give state of the 8 puzzle to reach the goal state (2D array) as mentioned below which can be represented as a 3 x 3 matrix. The output is the cheapest cost which is calculated by the number of each block moved to get to the goal state. For example if block with ```2``` is moved then the ```cost += 2``` and so on.
+8-Puzzle is a JAVA program for solving a give state of the 8 puzzle to reach the goal state (2D array) as mentioned below which can be represented as a 3 x 3 matrix. 
+
+```Board.java```   implements an immutable data type ```Board```.
+```Solver.java``` implements an A* search, BFS search, and DFS search to solve 3-by-3 slider puzzles by creating an immutable data type ```Solver```. 
+
+The output is the cheapest cost which is calculated by the number of each block moved to get to the goal state. For example if block with ```2``` is moved then the ```cost += 2``` and so on.
 
 Goal : ```[1, 2, 3, 8, 0, 4, 7, 6, 5]```
 
