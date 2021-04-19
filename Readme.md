@@ -1,8 +1,14 @@
 # 8-Puzzle
 
-8-Puzzle is a JAVA program for solving a give state of the 8 puzzle to reach the goal state (2D array) as mentioned below which can be represented as a 3 x 3 matrix.
+8-Puzzle is a JAVA program for solving a give state of the 8 puzzle to reach the goal state (2D array) as mentioned below which can be represented as a 3 x 3 matrix. The output is the cheapest cost which is calculated by the number of each block moved to get to the goal state. For example if block with ```2``` is moved then the ```cost += 2``` and so on.
 
 Goal : ```[1, 2, 3, 8, 0, 4, 7, 6, 5]```
+
+Example:
+* Given State:  ``` {{1, 3, 4}, {8, 0, 2}, {7, 6, 5} ```
+* Goal State: ``` {{1, 2, 3}, {8, 0, 4}, {7, 6, 5} ```
+* Cheapest Cost: 30
+
 
 ## Installation
 
