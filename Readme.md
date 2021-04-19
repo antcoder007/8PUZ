@@ -55,14 +55,3 @@ Example:
 * Please present your test case in the form of 3 x 3 matrix in the .txt file where blocks on each row are separated by space.
 * Thus, to finally run a new test file, go to the first line inside main function in Solver.java and replace file name in the line File file = new File("yourFileName.txt").
 
-
-```
-## Contributors
-
-* Premanshu Yadav
-* Ammar Mashhadi
-* Omran Al Bulushi
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
