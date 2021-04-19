@@ -7,13 +7,18 @@ public class Solver {
     private State goal1;
     private State goal2;
     private State goal3;
-    private State min3;
     private int cost1;
     private int cost2;
     private int cost3;
-    private PriorityQueue<State> PQ;
-    private ArrayDeque<State> Q;
+    private State min3;
+    private PriorityQueue<State> PQ; // Priority_Queue for A*
+    private ArrayDeque<State> Q; // Q for BFS
 
+    /*
+     * State structure that holds the current state,
+     * previous state, moves to get to current state,
+     * and the cost.
+     */
     private class State {
         private int moves;
         private Board board;
@@ -28,6 +33,9 @@ public class Solver {
         }
     }
 
+    /*
+     * constructor initialization
+     */
     public Solver(Board initial) {
         PQ = new PriorityQueue<State>(new Comparator<State>(){
             @Override
@@ -46,6 +54,11 @@ public class Solver {
         cost3 = Integer.MAX_VALUE;
     }
 
+    /*
+     * Here the A* Algorithm uses a PQ to find
+     * the path with least distance and also best possible
+     * path using heuristic function @manhattan()
+     */
     public void dijkstra() {
         while (!PQ.isEmpty()) {
             State min = PQ.poll();
@@ -70,6 +83,11 @@ public class Solver {
         }
     }
 
+    /*
+     * The BFS algorithm implemented using Queue
+     * and scans through all possible states.
+     * Slower than A*.
+     */
     public void bfs() {
         while (!Q.isEmpty()) {
             int size = Q.size();
@@ -97,6 +115,12 @@ public class Solver {
         }
     }
 
+    /*
+     * The DFS algorithm implemented in a Recursive
+     * manner and scans through all possible states
+     * by visiting all possible branches of each state.
+     * Slower than BFS and A*.
+     */
     public void dfs() {
         callDFS(min3);
     }
@@ -146,8 +170,12 @@ public class Solver {
         return isSolvabledfs() ? cost3 : -1;
     }
 
+    /*
+     * Main function to RUN the program and scan test cases
+     * from file.
+     */
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("SampleFile3.txt");
+        File file = new File("SampleFile1.txt");
         Scanner sc = new Scanner(file);
         int[][] in = new int[3][3];
         for (int i = 0; i < 3; i++)
