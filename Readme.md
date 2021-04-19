@@ -35,7 +35,7 @@ Example:
 * Open Visual Studio Code or IntelliJ IDEA (recommended).
     * IntelliJ IDEA has a free license available for students: https://www.jetbrains.com/community/education/#classrooms
 
-### Visual Studio Code Steps:
+### Visual Studio Code:
 
 * Open new window and click on - Open Folder.
 * Select the extracted folder 8PUZ and it should open in viscose.
@@ -45,7 +45,7 @@ Example:
     * Also, in Solver.java you can see a shortcut link to 'Run' the program just above the main function.
     * Another way is to go to debug option on left pane of vscode and select 'Run and Debug'.
 
-### IntelliJ IDEA
+### IntelliJ IDEA:
 
 * Open IntelliJ IDEA and select 'Open Project'.
 * You can find the 'Run' option on the 'File Menu Bar'.
