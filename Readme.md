@@ -19,6 +19,9 @@ Example:
 ```
 * Cheapest Cost: 30
 
+* The program is implemented in 3 different ways : A* algorithm, BFS, DFS.
+    * A* algorithm uses a heuristic function i.e. manhattan distance to find the best possible path.
+    ![a_star](https://www.cs.princeton.edu/courses/archive/fall16/cos226/assignments/8puzzle-game-tree.png)
 
 ## Installation
 
