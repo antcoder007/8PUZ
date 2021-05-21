@@ -55,11 +55,11 @@ public class Solver {
     }
 
     /*
-     * Here the A* Algorithm uses a PQ to find
+     * Here the dijkstra Algorithm uses a PQ to find
      * the path with least distance and also best possible
      * path using heuristic function @manhattan()
      */
-    public void a_star() {
+    public void dij() {
         while (!PQ.isEmpty()) {
             State min = PQ.poll();
             if (min.moves > 30) {
@@ -86,7 +86,7 @@ public class Solver {
     /*
      * The BFS algorithm implemented using Queue
      * and scans through all possible states.
-     * Slower than A*.
+     * Slower than dijsktra.
      */
     public void bfs() {
         while (!Q.isEmpty()) {
@@ -119,7 +119,7 @@ public class Solver {
      * The DFS algorithm implemented in a Recursive
      * manner and scans through all possible states
      * by visiting all possible branches of each state.
-     * Slower than BFS and A*.
+     * Slower than BFS and dijsktra.
      */
     public void dfs() {
         callDFS(min3);
@@ -156,7 +156,7 @@ public class Solver {
     }
 
     public int dijCost() {
-        a_star();
+        dij();
         return isSolvabledij() ? cost1 : -1;
     }
 
@@ -184,7 +184,7 @@ public class Solver {
 
         Board initial = new Board(in);
         Solver solver = new Solver(initial);
-        System.out.println("Minimum cost by Dijkstra's: " + solver.dijCost());
+        System.out.println("Minimum cost by A* : " + solver.dijCost());
         System.out.println("Minimum cost by BFS: " + solver.bfsCost());
         System.out.println("Minimum cost by DFS: " + solver.dfsCost());
         sc.close();
