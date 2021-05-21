@@ -55,7 +55,7 @@ public class Solver {
     }
 
     /*
-     * Here the dijkstra Algorithm uses a PQ to find
+     * Here the A* Algorithm uses a PQ to find
      * the path with least distance and also best possible
      * path using heuristic function @manhattan()
      */
@@ -86,7 +86,7 @@ public class Solver {
     /*
      * The BFS algorithm implemented using Queue
      * and scans through all possible states.
-     * Slower than dijsktra.
+     * Slower than A*.
      */
     public void bfs() {
         while (!Q.isEmpty()) {
@@ -119,7 +119,7 @@ public class Solver {
      * The DFS algorithm implemented in a Recursive
      * manner and scans through all possible states
      * by visiting all possible branches of each state.
-     * Slower than BFS and dijsktra.
+     * Slower than BFS and A*.
      */
     public void dfs() {
         callDFS(min3);
